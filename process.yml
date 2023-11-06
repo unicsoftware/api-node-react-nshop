@@ -1,0 +1,7 @@
+apps:
+  - script: 'api/scr/index.ts'
+    exec_mode: 'fork'
+    name: 'worker-0'
+    env:
+      PORT: 3400
+      NODE_ENV: production
