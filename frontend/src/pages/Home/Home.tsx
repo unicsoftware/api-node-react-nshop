@@ -119,6 +119,52 @@ const Home: React.FC = () => {
                 </DataList.Row>
               ))}
             </DataList>
+            <HomeDataProvider>
+              {({ totalProducts, onCreateProduct, isLoading }) => (
+                <Card>
+                  <Card.Header title={t('home.second-card.title')} />
+                  <Card.Body>
+                    <Box display="flex" flexDirection="column" gap="4" mb="2">
+                      <Text>{t('home.second-card.description')}</Text>
+                      <Box display="flex" gap="2" alignItems="center">
+                        <Text color="neutral-textDisabled">
+                          {t('home.second-card.total-product')}:
+                        </Text>
+                        {!isLoading.totalProducts && (
+                          <Title as="h6" fontSize="h1">
+                            {totalProducts ?? 0}
+                          </Title>
+                        )}
+                        {isLoading.totalProducts && (
+                          <Title.Skeleton as="h6" height="25px" width="28px" />
+                        )}
+                      </Box>
+                    </Box>
+                  </Card.Body>
+                  <Card.Footer>
+                    <Button
+                      appearance="primary"
+                      onClick={onCreateProduct}
+                      disabled={isLoading.createProduct}
+                    >
+                      {isLoading.createProduct && (
+                        <Spinner color="currentColor" size="small" />
+                      )}
+                      {!isLoading.createProduct && (
+                        <Icon
+                          color="currentColor"
+                          source={<PlusCircleIcon />}
+                        />
+                      )}
+                      {t('home.second-card.create-products')}
+                    </Button>
+                    <Button onClick={() => navigate('/products')}>
+                      Produtos
+                    </Button>
+                  </Card.Footer>
+                </Card>
+              )}
+            </HomeDataProvider>
           </Layout.Section>
         </Layout>
       </Page.Body>
