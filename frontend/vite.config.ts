@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({ 
   server: {
     port :5173,
-   // host :'http://ec2-18-209-148-149.compute-1.amazonaws.com/',
+    host :'http://ec2-18-209-148-149.compute-1.amazonaws.com/',
     hmr: {
       overlay: false
     }
