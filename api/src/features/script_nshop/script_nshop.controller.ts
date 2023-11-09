@@ -6,9 +6,8 @@ import { Script } from "vm";
 const database = require("../../database/connection");
 
 class ScriptNShopController {
-  scripListAll(req: Request, res: Response) {
-    console.log("Cheguei no Controller");
-    res.send("AGora sim");
+  health(req: Request, res: Response) {
+    res.status(200).json({ status: 'OK', message: 'API está saudável' });
   }
 
   async getAll(

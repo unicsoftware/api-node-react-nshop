@@ -29,12 +29,17 @@ routes.delete(
   ProductController.delete
 );
 
+/* ------------------------ SCRIPTS ------------------------ */
+routes.get('/', (req, res) => {
+  res.status(200).json({ status: 'OK', message: 'API está saudável' });
+});
+
 routes.get(
-  "/scripListAll",  
-  ScriptNShopController.scripListAll
+  "/health",  
+  ScriptNShopController.health
 );
 routes.get(
-  "/scripList",  
+  "/scriptList",  
   ScriptNShopController.getAll
 );
 export default routes;
