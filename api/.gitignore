@@ -24,4 +24,4 @@ db.json
 *.njsproj
 *.sln
 *.sw?
-.env
+#.env
