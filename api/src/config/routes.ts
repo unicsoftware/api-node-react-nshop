@@ -35,8 +35,8 @@ routes.get('/', (req, res) => {
 });
 
 routes.get(
-  "/health",  
-  ScriptNShopController.health
+  "/healthy",  
+  ScriptNShopController.healthy
 );
 routes.get(
   "/scriptList",  

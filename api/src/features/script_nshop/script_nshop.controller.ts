@@ -6,7 +6,7 @@ import { Script } from "vm";
 const database = require("../../database/connection");
 
 class ScriptNShopController {
-  health(req: Request, res: Response) {
+  healthy(req: Request, res: Response) {
     res.status(200).json({ status: 'OK', message: 'API está saudável' });
   }
 
