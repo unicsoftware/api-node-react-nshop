@@ -18,11 +18,11 @@ import {
 
 import {
   ExternalLinkIcon,
-  PictureIcon,
+  PictureIcon, ToolsIcon,
   CheckIcon,
   PlusCircleIcon,
-  ChevronDownIcon,
-  CreditCardIcon,
+  //ChevronDownIcon,
+  //CreditCardIcon,
   BoxUnpackedIcon,
 } from "@nimbus-ds/icons";
 
@@ -55,6 +55,10 @@ const Home: React.FC = () => {
             }
             desktopContent={
               <Box display="flex" gap="2">
+                <Button onClick={() => navigate('/scriptloja')}>
+                  <Icon source={<ToolsIcon />} color="currentColor" />
+                  Scripts
+                </Button>
                 <Button onClick={() => navigate('/examples')}>
                   <Icon source={<PictureIcon />} color="currentColor" />
                   Exemplos

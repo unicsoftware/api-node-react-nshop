@@ -54,5 +54,15 @@ export default {
         many: 'Selecionados',
       },
     },
+    scriptLoja: {
+      title: 'Scripts da Loja',
+      name: 'Nome',
+      remove: 'Remover',
+      'no-content': 'Não há scripts para serem exibidos',
+      selected: {
+        single: 'Selecionado',
+        many: 'Selecionados',
+      },
+    },
   },
 };
